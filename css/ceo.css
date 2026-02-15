@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: italic;
+}
+.courgette-regular {
+  font-family: "Courgette", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --color-1: #9F2B00;
+  --textBlack: black;
+  --textWhite: white;
+  --color-2: #C05E23;
+  --color-3: #FF7E20;
+  --gradient: linear-gradient(to bottom, #9F2B00, #FF7E20);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+  
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-image: url(../images/ceoBackground.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+/* nav styling */
+nav {
+  height: 150px; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+.navLogo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 5%
+}
+.navLogo img {
+  width: 100px;
+}
+.navLogo .logoHeader {
+  font-size: 12px;
+  color: var(--textWhite);
+}
+.menuContainer {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+}
+.linksContainer {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+nav .linksContainer a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--textWhite);
+  font-size: 1.25rem;
+}
+nav .linksContainer a:hover {
+  text-decoration: underline;
+}
+.dropdownWrapper {
+  position: relative;
+  height: 15%;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+/* Submenu */
+.ceoUL {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: -40%;
+    min-width: 150px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+    background-color: var(--textWhite);
+}
+.ceoUL li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--textBlack);
+    font-size: 1.25rem;
+    text-align: center;
+}
+.ceoUL li a:hover {
+  text-decoration: underline;
+}
+/* Hover trigger */
+ .dropdownWrapper:hover .ceoUL {
+  display: block;
+}
+
+#sidebar-active {
+  display: none;
+}
+.openBtn, .closeBtn {
+  display: none;
+}
+
+/* main styling */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    
+   
+}
+.headTitle  {
+    width: 100%;
+    text-align: center;
+    font-size: 1.75rem;
+    color: var(--textWhite);
+    margin-top: 30px;
+}
+.ceoContainter {
+    width: 100%;
+    height: 900px;
+    display: flex;
+   
+}
+
+.ceoPicContaniner{
+  width: 50%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ceoPic {
+    height: 500px;
+    width: 500px;
+    background-image: url(../images/ceo.jpg);
+   
+   
+}
+.ceoTitle {
+    width: 100%;
+    height: 70px;
+    color: var(--textWhite);
+    text-align: center;
+    font-size: 1.0rem;
+     
+}
+
+.ceoParaContainer {
+  width: 50%; 
+  height: 650px;
+  display: flex;
+  justify-content: center;
+}
+.ceoPara {
+    width: 100%;
+    height: 500px;
+    z-index: 30;
+    color: var(--textWhite);
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);      
+}
+.ceoPara p {
+  width: 90%;
+  height: 100%;
+  font-size: 1.75rem;
+  margin-left: 5px;
+}
+  /* styling footer section */
+footer {
+  width: 100%;
+  height: 270px;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.footerContainer .footerLogo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo .imgContainer {
+  width: 100px;
+  height: 100px;
+}
+
+.footerContainer .footerLogo .imgContainer img {
+  width: 100%;
+}
+
+.footerContainer .footerLogo h4 {
+  font-size: 1.25rem;
+   color: var(--textWhite);
+}
+
+.footerContainer .footerLogo h4 a {
+  text-decoration: none;
+  color: var(--textWhite);
+}
+
+.footerContainer .footerLogo h4 a:hover {
+  text-decoration: underline;
+} 
+
+.footerContainer .footerNav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+
+.footerContainer .footerNav a {
+  color: var(--textWhite);
+  text-decoration: none;
+}
+
+.footerContainer .footerNav a:hover {
+  text-decoration: underline;
+}
+
+.footerContainer .footerCopyRights {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+   color: var(--textWhite);
+}
+
+.footerContainer .footerCopyRights a {
+  text-decoration: none;
+   color: var(--textWhite);
+}
+
+.footerContainer .footerCopyRights a:hover {
+  text-decoration: underline;
+}
+
+header {
+  position: relative;
+  z-index: 1000;
+}
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+@media(max-width: 1550px) {
+  .ceoPara {
+    height: 550px;
+  }
+} 
+
+@media(max-width: 1390px) {
+
+  .ceoPara {
+    height: 600px;
+  }
+} 
+
+@media(max-width: 1300px) {
+
+  .ceoPara {
+    height: 650px;
+  }
+} 
+
+@media(max-width: 1200px) {
+
+   .ceoTitle {
+    font-size: .90rem;
+   }
+
+  .ceoPara {
+    height: 600px;
+  }
+
+  .ceoPara p{
+    font-size: 1.50rem;
+  }
+} 
+
+@media(max-width: 1110px) {
+  .ceoContainter {
+    flex-direction: column;
+    align-items: center;
+    height: 1200px;
+  }
+
+  .ceoPicContaniner {
+    width: 100%;
+  }
+
+  .ceoTitle {
+    font-size: .70rem;
+   }
+
+  .ceoParaContainer {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ceoPara {
+    height: 400px;
+    text-align: center;
+  }
+}
+
+
+@media(max-width: 850px) {
+  nav .linksContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    background-color: var(--color-3);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-in-out;
+    overflow: hidden;
+    
+  }
+
+  .navLogo  {
+    left: 0%;
+  }
+
+  nav .linksContainer a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    color: var(--textWhite);
+  }
+
+  .dropdownWrapper {
+    height: 5%;
+    width: 30%;
+  }
+
+  .ceoUL {
+    background-color: white;
+    color: black;
+    width: 130px;
+    height: 50px;
+    position: relative;
+    left: -110%;
+    
+  }
+
+  .ceoUL li a {
+    color: black;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .openBtn, .closeBtn {
+    display: block;
+    padding: 20px;
+  }
+
+  #sidebar-active:checked ~ .linksContainer {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    background-color:  rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .ceoPara {
+    height: 500px;
+    text-align: center;
+  }
+}
+
+@media(max-width: 768px) {
+  body {
+    background-image: none;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  .headTitle  {
+    color: var(--color-3);
+  }
+
+  .ceoTitle {
+      color: var(--textBlack);
+      
+  }
+
+  .ceoPara {
+    color: var(--textWhite);
+    background-color: var(--color-3);
+ 
+  }
+
+  .footerContainer .footerLogo h4 {
+    color: var(--textBlack);
+  }
+
+  .footerContainer .footerLogo h4 a {
+    color: var(--textBlack);
+  }
+
+  .footerContainer .footerNav a {
+    color: var(--textBlack);
+  }
+
+  .footerContainer .footerCopyRights {
+    color: var(--textBlack);
+  }
+
+  .footerContainer .footerCopyRights a {
+    color: var(--textBlack);
+  }
+  
+}
+
+
+@media(max-width: 680px) {
+  .ceoContainter {
+    height: 1400px
+  }
+
+  .ceoParaContainer {
+    height: 600px;
+  }
+
+  .ceoPara {
+    height: 550px;
+  }
+}
+
+@media(max-width: 600px) {
+  .ceoParaContainer {
+    height: 650px;
+  }
+
+  .ceoPara {
+    height: 620px;
+  }
+
+  .ceoPara p {
+    font-size: 1.40rem;
+  }
+}
+
+@media(max-width: 501px) {
+  .ceoContainter {
+    height: 1600px
+  }
+
+  .ceoPicContaniner {
+    height: 600px;
+  }
+
+  .ceoPic {
+    height: 500px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+   
+}
+
+  .ceoParaContainer {
+    height: 800px;
+  }
+
+  .ceoPara {
+    height: 750px;
+  }
+}
+
+
+@media(max-width: 405px) {
+  .ceoParaContainer {
+    height: 900px;
+  }
+
+  .ceoPara {
+    height: 870px;
+  }
+}

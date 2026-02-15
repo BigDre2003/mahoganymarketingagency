@@ -1,0 +1,1087 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .courgette-regular {
+    font-family: "Courgette", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  :root {
+    --color-1: #9F2B00;
+    --textBlack: black;
+    --textWhite: white;
+    --color-2: #C05E23;
+    --color-3: #FF7E20;
+    --gradient: linear-gradient(to bottom, #9F2B00, #FF7E20);
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 12px;
+    
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+ 
+
+  /* nav styling */
+
+  nav {
+    height: 150px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .navLogo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5%
+
+  }
+
+  .navLogo img {
+    width: 100px;
+  }
+  .navLogo .logoHeader {
+    font-size: 12px;
+  }
+
+  .menuContainer {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+  }
+
+  .linksContainer {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+  }
+
+  nav .linksContainer a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--textBlack);
+    font-size: 1.25rem;
+  }
+
+  nav .linksContainer a:hover {
+    text-decoration: underline;
+  }
+
+  .dropdownWrapper {
+    position: relative;
+    height: 15%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+  }
+
+
+  /* Submenu */
+  .ceoUL {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: -40%;
+      min-width: 150px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 1000;
+  }
+
+  .ceoUL li a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.25rem;
+      text-align: center;
+  }
+
+  .ceoUL li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Hover trigger */
+ .dropdownWrapper:hover .ceoUL {
+    display: block;
+  }
+ 
+
+  #sidebar-active {
+    display: none;
+  }
+
+  .openBtn, .closeBtn {
+    display: none;
+  }
+
+
+/* main styling */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+/* styling welcome section */
+.headTitle  {
+  width: 100%;
+  text-align: center;
+  font-size: 1.75rem;
+  color: var(--color-3);
+  margin-top: 30px;
+}
+
+.aboutHeader  {
+    width: 100%;
+    height: 500px;
+  }
+
+.aboutHeader .headerImg {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/About\ Us.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutusP{
+   width: 100%;
+  height: 300px;
+  background-color: var(--color-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutusP p {
+  width: 80%;
+  
+  font-size: 1.75rem;
+  text-align: center;
+  color: var(--textWhite);
+}
+
+
+
+/* styling mission section */
+.missionContent {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.missionContent .missionTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.50rem;
+  color: var(--color-3);
+}
+
+.missionContent .missionP {
+  width: 80%;
+  height: 200px;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.missionContent .missionP p {
+  width: 100%;
+}
+
+/* styling vision section */
+.visionContent {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--color-3);
+  color: var(--textWhite);
+}
+
+.visionContent .visionTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.50rem;
+}
+
+.visionContent .visionP {
+  width: 80%;
+  height: 250px;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.visionContent .visionP p {
+  width: 100%;
+}
+
+/* styling passionate marketing expert, our analytical, and industry wide success section */
+.aboutContent1 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.aboutContent1 .passionateExperts {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.aboutContent1 .passionateExperts .passionateExpertTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.50rem;
+  color: var(--color-3);
+}
+
+.aboutContent1 .passionateExperts .passionateExpertP {
+  width: 80%;
+  height: 400px;
+  text-align: center;
+  font-size: 1.60rem;
+    
+}
+
+.aboutContent1 .passionExpertImgContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutContent1 .passionExpertImgContainer .passionExpertImg {
+  width: 600px;
+  height: 433px;
+}
+
+.aboutContent1 .passionExpertImgContainer .passionExpertImg img {
+  border-radius: 0px 70px 0px 70px;
+  width: 100%;
+  box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+.aboutContent2 {
+  width: 100%;
+  height: 520px;
+  display: flex;
+  background-color: var(--color-3);
+}
+
+.aboutContent2 .analyticalApproach {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.aboutContent2 .analyticalApproach .analyticalApproachTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.50rem;
+  color: var(--textWhite);
+  margin-top: 20px;
+}
+
+.aboutContent2 .analyticalApproach .analyticalApproachP {
+  width: 80%;
+  height: 400px;
+  text-align: center;
+  font-size: 1.60rem;
+  color: var(--textWhite);
+}
+
+.aboutContent2 .analyticalApproachImgContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutContent2 .analyticalApproachImgContainer .analyticalApproachImg {
+  width: 600px;
+  height: 433px;
+}
+
+.aboutContent2 .analyticalApproachImgContainer .analyticalApproachImg img {
+  border-radius: 70px 0 70px 0;
+  width: 100%;
+  box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.aboutContent3 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+
+.aboutContent3 .industrySuccess {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.aboutContent3 .industrySuccess .industrySuccessTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.50rem;
+  color: var(--color-3);
+}
+
+.aboutContent3 .industrySuccess .industrySuccessP {
+  width: 80%;
+  height: 200px;
+  text-align: center;
+  font-size: 1.60rem;
+}
+
+.aboutContent3 .industrySuccessImgContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutContent3 .industrySuccessContainer .industrySuccessImg {
+  width: 600px;
+  height: 433px;
+}
+
+.aboutContent3 .industrySuccessImgContainer .industrySuccessImg img {
+  border-radius: 0px 70px 0px 70px;
+  width: 100%;
+  box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+.bookConsultationContainer {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--color-3);
+  color: var(--textWhite);
+}
+
+.bookConsultationContainer .bookConsultationTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.50rem;
+}
+
+.bookConsultationContainer .bookConsultationP {
+  width: 80%;
+  height: 150px;
+  text-align: center;
+  font-size: 1.60rem;
+}
+
+.bookConsultationContainer .bookConsultationBtn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.bookConsultationContainer .bookConsultationBtn .bookBtn {
+  width: 350px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  background-color: white;
+  font-size: 1.75rem;
+}
+
+.bookConsultationContainer .bookConsultationBtn .bookBtn a {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.bookConsultationContainer .bookConsultationBtn .bookBtn:hover {
+  cursor: pointer;
+  box-shadow: 40px 0 100px #E95D08, -40px 0 100px black;
+  background-image: linear-gradient(to right, #9f2b00, #b74003, #d05606, #e76c0b, #ff8210);
+  color: var(--textWhite);
+}
+
+/* styling footer section */
+footer {
+  width: 100%;
+  height: 270px;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo .imgContainer {
+  width: 100px;
+  height: 100px;
+}
+
+.footerContainer .footerLogo .imgContainer img {
+  width: 100%;
+}
+
+.footerContainer .footerLogo h4 {
+  font-size: 1.25rem;
+}
+
+.footerContainer .footerLogo h4 a {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.footerContainer .footerLogo h4 a:hover {
+  text-decoration: underline;
+} 
+
+.footerContainer .footerNav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+
+.footerContainer .footerNav a {
+  color: black;
+  text-decoration: none;
+}
+
+.footerContainer .footerNav a:hover {
+  text-decoration: underline;
+}
+
+.footerContainer .footerCopyRights {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerContainer .footerCopyRights a {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.footerContainer .footerCopyRights a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+@media(max-width: 1200px) {
+  .aboutusP p {
+    font-size: 1.50rem;
+  }
+
+  .missionContent .missionTitle {
+    font-size: 1.30rem;
+  } 
+
+  .missionContent .missionP {
+    font-size: 1.50rem;
+  }
+
+  .visionContent .visionTitle {
+    font-size: 1.30rem;
+  } 
+
+  .visionContent .visionP {
+    font-size: 1.50rem;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertTitle {
+    font-size: 1.30rem;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertP {
+    width: 100%;
+  }
+
+  .aboutContent1 .passionExpertImgContainer .passionExpertImg {
+    width: 500px;
+  }
+
+  .aboutContent1 .passionExpertImgContainer .passionExpertImg img {
+    position: relative;
+    top: 50px;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachTitle {
+    font-size: 1.30rem;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachP  {
+    width: 100%;
+  }
+
+  .aboutContent2 .analyticalApproachImgContainer .analyticalApproachImg {
+    width: 500px;
+  }
+
+  .aboutContent2 .analyticalApproachImgContainer .analyticalApproachImg img {
+    position: relative;
+    top: 50px;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessTitle {
+    font-size: 1.30rem;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessP {
+    width: 100%;
+  }
+
+  .aboutContent3 .industrySuccessImgContainer .industrySuccessImg {
+    width: 500px;
+  }
+
+  .aboutContent3 .industrySuccessImgContainer .industrySuccessImg img {
+    position: relative;
+    
+  }
+
+  .bookConsultationContainer .bookConsultationTitle {
+    font-size: 1.30rem;
+  }
+
+  .bookConsultationContainer .bookConsultationP {
+    font-size: 1.50rem;
+  }
+
+}
+
+@media(max-width: 1024px) {
+  .visionContent {
+    height: 400px;
+  }
+
+  .visionContent .visionP {
+    height: 300px;
+  }
+
+
+  .aboutContent1 {
+    justify-content: center;
+    height: 300px;
+  }
+
+  .aboutContent1 .passionateExperts {
+    width: 100%;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertP {
+    width: 90%;
+    height: 250px;
+   
+  }
+
+  .aboutContent1 .passionExpertImgContainer {
+    display: none;
+  }
+
+  .aboutContent2 {
+    justify-content: center;
+    height: 370px;
+  }
+
+  .aboutContent2 .analyticalApproach {
+    width: 100%;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachP {
+    width: 90%;
+    height: 250px;
+  }
+
+  .aboutContent2 .analyticalApproachImgContainer {
+    display: none;
+  }
+
+  .aboutContent3 {
+    justify-content: center;
+    height: 300px;
+  }
+
+  .aboutContent3 .industrySuccess {
+    width: 100%;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessP {
+    width: 90%;
+    height: 150px;
+  }
+
+  .aboutContent3 .industrySuccessImgContainer {
+    display: none;
+  }
+
+
+}
+
+@media(max-width: 930px) {
+  .aboutusP {
+    height: 400px;
+  }
+  .aboutusP p{
+    height: 300px;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertP {
+    width: 100%;
+    height: 250px;
+   
+  }
+}
+
+
+
+
+@media(max-width: 850px) {
+  nav .linksContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    background-color: var(--color-3);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-in-out;
+    overflow: hidden;
+    
+  }
+
+  .navLogo  {
+    left: 0%;
+  }
+
+  nav .linksContainer a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    color: var(--textWhite);
+  }
+
+  .dropdownWrapper {
+    height: 5%;
+    width: 30%;
+  }
+
+  .ceoUL {
+    background-color: white;
+    color: black;
+    width: 130px;
+    height: 50px;
+    position: relative;
+    left: -110%;
+    
+  }
+
+  .ceoUL li a {
+    color: black;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .openBtn, .closeBtn {
+    display: block;
+    padding: 20px;
+  }
+
+  #sidebar-active:checked ~ .linksContainer {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    background-color:  rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .headTitle {
+    font-size: 1.30rem;
+  }
+
+  .aboutHeader {
+    height: 200px;
+  }
+
+  .aboutHeader .headerImg {
+    background-image: url("../images/About\ Us\ small.png");
+  }
+
+  .aboutusP p {
+    width: 100%;
+  }
+
+  .missionContent .missionP {
+    width: 100%;
+  }
+
+  .visionContent .visionP {
+    width: 100%;
+  }
+
+  .aboutContent1 {
+    justify-content: center;
+    height: 350px;
+  }
+
+  .bookConsultationContainer .bookConsultationP {
+    height: 150px;
+  }
+
+}
+
+@media(max-width: 700px) {
+  .aboutusP {
+    height: 400px;
+  }
+
+  .aboutusP p{
+    height: 350px;
+  }
+
+  .missionContent {
+    height: 400px;
+  }
+
+  .missionContent .missionP {
+    height: 250px;
+  }
+
+  .visionContent {
+    height: 450px;
+  }
+
+  .visionContent .visionP {
+    height: 350px;
+  }
+
+  .aboutContent1 {
+    justify-content: center;
+    height: 400px;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertP {
+    height: 300px;
+   
+  }
+
+  .aboutContent2 {
+    height: 430px;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachP {
+    height: 300px;
+  }
+
+  .bookConsultationContainer .bookConsultationP {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .navLogo .logoHeader {
+    font-size: .85rem;
+  }
+
+  .aboutusP p{
+    height: 350px;
+    font-size: 1.40rem;
+  }
+
+  .missionContent .missionP {
+    height: 250px;
+    font-size: 1.40rem;
+  }
+
+  .visionContent .visionP {
+    
+    font-size: 1.40rem;
+  }
+
+  .aboutContent1 {
+    height: 450px;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertP {
+    height: 350px;
+  }
+
+  .aboutContent2 {
+    height: 500px;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachP {
+    height: 350px;
+    width: 100%;
+  }
+
+  .aboutContent3 {
+    height: 450px;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessP {
+    height: 350px;
+    width: 100%;
+  }
+
+  .bookConsultationContainer {
+    height: 500px;
+  }
+
+  .bookConsultationContainer .bookConsultationP {
+    height: 220px;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .aboutusP {
+    height: 430px;
+  }
+  .aboutusP p {
+    height: 380px;
+  }
+  .missionContent {
+    height: 450px;
+  }
+
+  .missionContent .missionTitle {
+    font-size: 1.10rem;
+  }
+
+  .missionContent .missionP {
+    height: 300px;
+  }
+
+  .visionContent .visionTitle {
+    font-size: 1.10rem;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertTitle {
+    font-size: 1.10rem;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertP {
+   font-size: 1.40rem;
+  }
+  
+  .aboutContent2 .analyticalApproach .analyticalApproachTitle {
+    font-size: 1.10rem;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessTitle {
+    font-size: 1.10rem;
+  }
+
+  .bookConsultationContainer .bookConsultationTitle {
+    font-size: 1.10rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .aboutusP {
+    height: 480px;
+  }
+
+  .aboutusP p {
+      height: 430px;
+  }
+
+  .missionContent .missionTitle {
+    font-size: 1.0rem;
+  }
+
+  .visionContent {
+    height: 500px;
+  } 
+
+  .visionContent .visionTitle {
+    font-size: 1.0rem;
+  }
+
+  .visionContent .visionP {
+    height: 400px;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertTitle {
+    font-size: 1.0rem;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachTitle {
+    font-size: 1.0rem;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachP {
+    height: 380px;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessTitle {
+    font-size: 1.0rem;
+  }
+
+  .bookConsultationContainer .bookConsultationTitle {
+    font-size: 1.0rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .aboutusP {
+    height: 500px;
+  }
+
+  .aboutusP p {
+      height: 450px;
+    }
+
+  .missionContent {
+      height: 480px;
+  }
+
+  .missionContent .missionTitle {
+    font-size: .90rem;
+  }
+
+  .missionContent .missionP {
+    height: 330px;
+  }
+
+  .visionContent {
+    height: 550px;
+  } 
+
+  .visionContent .visionTitle {
+    font-size: .90rem;
+  }
+
+  .visionContent .visionP {
+    height: 450px;
+  }
+
+  .aboutContent1 .passionateExperts .passionateExpertTitle {
+    font-size: .90rem;
+  }
+
+  .aboutContent2 {
+    height: 560px;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachTitle {
+    font-size: .90rem;
+  }
+
+  .aboutContent2 .analyticalApproach .analyticalApproachP {
+    height: 450px;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessTitle {
+    font-size: .90rem;
+  }
+
+  .aboutContent3 {
+    height: 550px;
+  }
+
+  .aboutContent3 .industrySuccess .industrySuccessP {
+    height: 450px;
+    width: 100%;
+  }
+
+  .bookConsultationContainer .bookConsultationTitle {
+    font-size: .90rem;
+  }
+}
+

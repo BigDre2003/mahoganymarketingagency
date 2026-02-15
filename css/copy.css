@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: italic;
+}
+
+.courgette-regular {
+  font-family: "Courgette", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color-1: #9F2B00;
+  --textBlack: black;
+  --textWhite: white;
+  --color-2: #C05E23;
+  --color-3: #FF7E20;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+  
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* nav styling */
+nav {
+  height: 100px; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+}
+.navLogo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 5%
+}
+.navLogo img {
+  width: 100px;
+}
+.navLogo .logoHeader {
+  font-size: 12px;
+}
+.menuContainer {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+}
+.linksContainer {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+nav .linksContainer a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--textBlack);
+  font-size: 1.25rem;
+}
+nav .linksContainer a:hover {
+  text-decoration: underline;
+}
+
+
+#sidebar-active {
+  display: none;
+}
+.openBtn, .closeBtn {
+  display: none;
+}
+/* main styling */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+/* styling welcome section */
+.contactHeader  {
+  width: 100%;
+  height: 500px;
+}
+
+.contactHeader .headerImg {
+width: 100%;
+height: 100%;
+background-image: url('../images/Contact\ Us.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+
+
+/* styling contact section */
+.container {
+  width: 800px;
+  height: 740px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 30px gray, -20px 20px 30px gray;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 50px;
+  background-color: var(--color-3);
+      
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 2.75rem;
+  color: var(--textWhite);
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+}
+
+.infoContent {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.personalInfoContent {
+  width: 100%;
+  height: 240px;
+  display: flex;
+}
+
+.personalInfo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.name {
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.name input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.name ::placeholder {
+  color: black;
+  font-weight: 600;
+}
+
+.email {
+  width: 100%;
+  margin-left: 10px;
+}
+
+.email input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.email ::placeholder {
+  color: black;
+  font-weight: 600;
+}
+
+.secondPersonalInfo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.company {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.company input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.company ::placeholder {
+  color: black;
+  font-weight: 600;
+}
+
+.phone {
+  width: 100%;
+}
+
+.phone input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.phone ::placeholder {
+  color: black;
+  font-weight: 600;
+}
+
+
+.messageInfo {
+  width: 100%;
+  height: 400px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.subject {
+  width: 100%;
+  margin-left: 10px;
+}
+
+.subject input {
+  width: 50%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.subject ::placeholder {
+  color: black;
+  font-weight: 600;
+}
+
+
+.message {
+  width: 100%;
+  height: 100px;
+  margin-left: 10px;
+    
+}
+
+.message textarea {
+  width: 90%;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.message ::placeholder {
+  color: black;
+  font-weight: 600;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #bbb;
+}
+
+.btnContainer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnContact {
+  width: 350px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  background-color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+
+.btnContact:hover {
+  cursor: pointer;
+  box-shadow: 40px 0 100px #E95D08, -40px 0 100px black;
+  background-image: linear-gradient(to right, #9f2b00, #b74003, #d05606, #e76c0b, #ff8210);
+} 
+
+
+/* styling footer section */
+footer {
+  width: 100%;
+  height: 270px;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo .imgContainer {
+  width: 100px;
+  height: 100px;
+}
+
+.footerContainer .footerLogo .imgContainer img {
+  width: 100%;
+}
+
+.footerContainer .footerLogo h4 {
+  font: 1.25rem;
+}
+
+.footerContainer .footerLogo h4 a {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.footerContainer .footerLogo h4 a:hover {
+  text-decoration: underline;
+} 
+
+.footerContainer .footerNav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+
+.footerContainer .footerNav a {
+  color: black;
+  text-decoration: none;
+}
+
+.footerContainer .footerNav a:hover {
+  text-decoration: underline;
+}
+
+.footerContainer .footerCopyRights {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerContainer .footerCopyRights a {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.footerContainer .footerCopyRights a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width: 850px) {
+ 
+
+  nav .linksContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    background-color: var(--color-3);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-in-out;
+
+  }
+
+  .navLogo  {
+    left: 0%;
+  }
+
+  nav .linksContainer a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    color: var(--textWhite);
+  } 
+
+  .openBtn, .closeBtn {
+    display: block;
+    padding: 20px;
+  }
+
+  #sidebar-active:checked ~ .linksContainer {
+    right: 0;
+  } 
+
+  #sidebar-active:checked ~ #overlay {
+    background-color:  rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: o;
+    z-index: 9;
+  }
+
+  .contactHeader {
+    height: 200px;
+  }
+
+  .contactHeader .headerImg {
+    background-image: url('../images/Contact\ Us\ smaller.png');
+  }
+
+  .container{
+    width: 90%;
+    height: 800px;
+    gap: 10px;
+    justify-content: none;
+  }
+
+  .personalInfoContent {
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+  }
+
+  .personalInfo {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .name {
+    margin-left: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .name input {
+    width: 350px;
+
+  }
+
+  .email {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .email input {
+    width: 350px;
+  }
+
+  .secondPersonalInfo {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .company {
+    margin-top: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .company input {
+    width: 350px;
+  }
+
+  .phone {
+    display: flex;
+    justify-content: center;
+  }
+
+  .phone input {
+    width: 350px;
+  }
+
+  .subject {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .subject input {
+    width: 350px;
+  }
+
+  .message {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+}
+
+@media(max-width: 600px) {
+  .navLogo .logoHeader {
+    font-size: .85rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .container{
+    width: 100%;
+  }
+}

@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.courgette-regular {
+  font-family: "Courgette", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color-1: #9F2B00;
+  --textBlack: black;
+  --textWhite: white;
+  --color-2: #C05E23;
+  --color-3: #FF7E20;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+html {
+  font-size: 12px;
+  
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+nav {
+    height: 150px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .navLogo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5%
+
+  }
+
+  .navLogo img {
+    width: 100px;
+  }
+  .navLogo .logoHeader {
+    font-size: 12px;
+  }
+
+  .menuContainer {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+  }
+
+  .linksContainer {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+  }
+
+  nav .linksContainer a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--textWhite);
+    font-size: 1.25rem;
+  }
+
+  nav .linksContainer a:hover {
+    text-decoration: underline;
+  }
+
+  .dropdownWrapper {
+    position: relative;
+    height: 15%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+  }
+
+
+  /* Submenu */
+  .ceoUL {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: -40%;
+      min-width: 150px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 1000;
+      background-color: var(--textWhite);
+  }
+
+  .ceoUL li a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.25rem;
+      text-align: center;
+  }
+
+  .ceoUL li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Hover trigger */
+ .dropdownWrapper:hover .ceoUL {
+    display: block;
+  }
+ 
+
+  #sidebar-active {
+    display: none;
+  }
+
+  .openBtn, .closeBtn {
+    display: none;
+  }
+
+/* main styling */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+/* styling header section */
+.videoBackground {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 1500px;
+}
+
+.videoBackground video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.headTitle  {
+  width: 100%;
+  text-align: center;
+  font-size: 1.75rem;
+  color: var(--textWhite);
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.serviceHeader  {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: none;
+}
+
+.serviceHeader .serviceImg {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/Our\ Services.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.serviceHeaderContent {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.serviceHeaderContent .HeaderP {
+  text-align: center;
+  width: 80%;
+  font-size: 1.75rem;
+  color: var(--textWhite);
+}
+
+/* styling main service section */
+.serviceContainer {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  z-index: 3;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 600px;
+}
+
+
+.swiper-slide {
+  background-color: var(--color-3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide.swiper-slide-active {
+  filter: none; /* 👈 No blur on active slide */
+   z-index: -2px;
+}
+
+.serviceContainer .swiper  .serviceInfo {
+  width: 300px;
+  height: 550px;
+}
+
+.serviceInfo h1 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--textWhite);
+}
+
+.serviceInfo p {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 10px;
+  margin-top: 30px;
+  color: var(--textWhite);
+}
+
+.serviceInfo ul {
+  font-size: 16px;
+  line-height: 25px;
+  position: relative;
+  left: 20px;
+  margin-bottom: 50px;
+  color: var(--textWhite);
+  padding: 0 10px;
+}
+
+.serviceInfo button {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  background-color: white;
+  font-size: 1.75rem;
+  position: absolute;
+  left: 0;
+  bottom: 70px;
+   color: var(--textBlack);
+}
+
+
+
+.serviceInfo button:hover {
+  cursor: pointer;
+  box-shadow: 40px 0 100px #E95D08, -40px 0 100px black;
+  background-image: linear-gradient(to right, #9f2b00, #b74003, #d05606, #e76c0b, #ff8210);
+}
+
+.serviceContainer .swiper .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 70px;
+}
+
+.serviceContainer .swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+
+.serviceContainer .swiper .swiper-slide-button {
+  color: var(--textBlack);
+  width: 70px;
+  height: 70px;
+}
+
+.swiper-slide-prev, .swiper-slide-next {
+  filter: blur(2px);
+}
+
+/* .serviceContainer .swiper .swiper-button-prev {
+  margin-left: -30px;
+}
+
+.serviceContainer .swiper .swiper-button-next {
+  margin-right: -20px;
+} */
+
+/* styling for the addition content */
+
+.additionalServicesContainer {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.additionalTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: var(--textWhite);
+  font-size: 1.50rem;
+}
+
+.additionalContent{
+  width: 100%;
+  height: 550px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  width: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--color-3);
+  border-radius: 20px 20px 20px 20px; 
+  
+  
+}
+
+.cardImg {
+  width: 50%;
+  height: 300px;
+}
+
+
+.cardTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: var(--textWhite);
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.cardPara {
+  width: 90%;
+  height: 300px;
+  font-size: 18px;
+  color: var(--textWhite);
+}
+
+.additionBtn {
+  width: 300px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  background-color: white;
+  font-size: 1.75rem;
+  margin-top: 40px;
+  
+}
+
+.additionBtn:hover {
+  cursor: pointer;
+  box-shadow: 40px 0 100px #E95D08, -40px 0 100px black;
+  background-image: linear-gradient(to right, #9f2b00, #b74003, #d05606, #e76c0b, #ff8210);
+}
+
+
+/* styling footer section */
+footer {
+  width: 100%;
+  height: 270px;
+  position: relative;
+  z-index: 1;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo .imgContainer {
+  width: 100px;
+  height: 100px;
+}
+
+.footerContainer .footerLogo .imgContainer img {
+  width: 100%;
+}
+
+.footerContainer .footerLogo h4 {
+  font-size: 1.25rem;
+  color: var(--textWhite);
+}
+
+.footerContainer .footerLogo h4 a {
+  text-decoration: none;
+  color: var(--textWhite);
+}
+
+.footerContainer .footerLogo h4 a:hover {
+  text-decoration: underline;
+} 
+
+.footerContainer .footerNav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+
+.footerContainer .footerNav a {
+  color: var(--textWhite);
+  text-decoration: none;
+}
+
+.footerContainer .footerNav a:hover {
+  text-decoration: underline;
+}
+
+.footerContainer .footerCopyRights {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  color: var(--textWhite);
+}
+
+.footerContainer .footerCopyRights a {
+  color: var(--textWhite);
+  text-decoration: none;
+}
+
+.footerContainer .footerCopyRights a:hover {
+  text-decoration: underline;
+}
+
+.videoBackground::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+
+@media(max-width: 1400px) {
+  .additionalServicesContainer {
+    height: 2100px;  
+  }
+
+  .additionalContent {
+    height: 1950px;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    height: 620px;
+  }
+
+  .additionBtn {
+    margin: 80px;
+  }
+}
+
+
+
+@media(max-width: 1280px) {
+  .serviceContainer {
+    width: 100%;
+  }
+}
+
+@media(max-width: 1100px) {
+  .serviceContainer .swiper .swiper-slide-button {
+    display: none;
+  }
+
+  .serviceContainer .swiper  .serviceInfo {
+    height: 600px;
+  }
+
+  .serviceContainer .swiper {
+    height: 650px;
+  }
+}
+
+
+
+
+@media(max-width: 850px) {
+  nav .linksContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    background-color: var(--color-3);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-in-out;
+    overflow: hidden;
+    
+  }
+
+  .navLogo  {
+    left: 0%;
+  }
+
+  nav .linksContainer a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    color: var(--textWhite);
+  }
+
+  .dropdownWrapper {
+    height: 5%;
+    width: 30%;
+  }
+
+  .ceoUL {
+    background-color: white;
+    color: black;
+    width: 130px;
+    height: 50px;
+    position: relative;
+    left: -110%;
+    
+  }
+
+  .ceoUL li a {
+    color: black;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .openBtn, .closeBtn {
+    display: block;
+    padding: 20px;
+  }
+
+  #sidebar-active:checked ~ .linksContainer {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    background-color:  rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .headTitle {
+    font-size: 1.30rem;
+  }
+
+  .serviceHeader  {
+    height: 200px;
+  }
+  
+  .serviceHeader .serviceImg {
+    background-image: url('../images/Our\ Services\ small.png');
+  }
+
+  .serviceContainer .swiper  .serviceInfo {
+    height: 650px;
+  }
+
+  .serviceContainer .swiper {
+    height: 700px;
+  }
+  
+}
+
+@media(max-width: 768px) {
+  .videoBackground{
+    display: none;
+  }
+
+  .serviceHeader {
+    display: block;
+  }
+
+  .headTitle {
+    color: var(--color-3);
+  }
+
+  .serviceHeaderContent .HeaderP {
+    color: var(--textBlack);
+  }
+
+  .footerContainer .footerLogo h4 {
+    color: var(--textBlack);
+  }
+
+  .footerContainer .footerLogo h4 a {
+    color: var(--textBlack)
+  }
+
+
+  .footerContainer .footerNav a {
+    color: var(--textBlack)
+  }
+
+
+  .footerContainer .footerCopyRights {
+    color: var(--textBlack)
+  }
+
+  .footerContainer .footerCopyRights a {
+    color: var(--textBlack)
+  }
+}
+
+@media(max-width: 750px) {
+  .serviceContainer .swiper  .serviceInfo {
+    height: 680px;
+  }
+
+  .serviceContainer .swiper {
+    height: 720px;
+  }
+}
+
+@media(max-width: 700px) {
+  .serviceContainer .swiper {
+      width: 80%;
+  }
+
+  .swiper-slide-prev, .swiper-slide-next {
+  filter: blur(0px);
+}
+}
+  
+@media(max-width: 600px) {
+  .navLogo .logoHeader {
+    font-size: .85rem;
+  }
+  .serviceContainer {
+      height: 800px;
+  }
+  .serviceContainer .swiper {
+      height: 750px;
+  }
+  .serviceHeaderContent {
+      height: 350px;
+  }
+
+}
+
+@media(max-width: 520px) {
+  .card{
+    width: 370px;
+  }
+
+  .cardTitle{
+    font-size: 15px;
+  }
+
+  .additionBtn{
+    margin-top: 120px;
+  }
+}
+
+@media(max-width: 450px) {
+  .serviceContainer .swiper {
+      width: 100%;
+  }
+}
+
+
+
+
+  

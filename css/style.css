@@ -1,0 +1,1123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .courgette-regular {
+    font-family: "Courgette", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  :root {
+    --color-1: #9F2B00;
+    --textBlack: black;
+    --textWhite: white;
+    --color-2: #C05E23;
+    --color-3: #FF7E20;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 12px;
+    
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+ 
+
+  /* nav styling */
+
+  nav {
+    height: 150px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .navLogo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5%
+
+  }
+
+  .navLogo img {
+    width: 100px;
+  }
+  .navLogo .logoHeader {
+    font-size: 12px;
+  }
+
+  .menuContainer {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+  }
+
+  .linksContainer {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+  }
+
+  nav .linksContainer a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--textBlack);
+    font-size: 1.25rem;
+  }
+
+  nav .linksContainer a:hover {
+    text-decoration: underline;
+  }
+
+  .dropdownWrapper {
+    position: relative;
+    height: 15%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+  }
+
+
+  /* Submenu */
+  .ceoUL {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: -40%;
+      min-width: 150px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 1000;
+  }
+
+  .ceoUL li a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.25rem;
+      text-align: center;
+  }
+
+  .ceoUL li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Hover trigger */
+ .dropdownWrapper:hover .ceoUL {
+    display: block;
+  }
+ 
+
+  #sidebar-active {
+    display: none;
+  }
+
+  .openBtn, .closeBtn {
+    display: none;
+  }
+
+
+  /* main styling */
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+/* styling welcome section */
+.headTitle  {
+  width: 100%;
+  text-align: center;
+  font-size: 1.75rem;
+  color: var(--color-3);
+  margin-top: 30px;
+}
+
+.mainHeadContent  {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.mainHeadContent .headContentImg {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/HomePage\ Banner-01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+
+.headContentP {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.headContentP .paragraph {
+  width: 70%;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+/* styling service section */
+.serviceContainer {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-3);
+}
+
+.serviceContainer .servicesWording {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.serviceContainer .servicesWording .serviceTitle {
+  font-size: 1.50rem;
+  text-align: center;
+  width: 100%;
+  color: var(--textWhite);
+  margin-top: 30px;
+}
+
+.serviceContainer .servicesWording .servicesP {
+  width: 70%;
+  height: 200px;
+  text-align: center;
+  font-size: 1.75rem;
+  color: var(--textWhite);
+}
+
+.serviceContainer .bestServices {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+/* .serviceContainer .bestServices a {
+  text-decoration: none;
+  color: var(--textBlack);
+} */
+
+.serviceContainer .bestServices .topServices1 {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background-image: url("../images/serviceMarble.png");
+  background-repeat: no-repeat;
+}
+
+.serviceContainer .bestServices .topServices1 .socialImg img{
+  border-radius: 20px;
+  width: 100%;
+}
+
+.serviceContainer .bestServices .topServices1 P {
+  font-size: 1.75rem;
+}
+
+/* .serviceContainer .bestServices .topServices1:hover {
+  cursor: pointer;
+  box-shadow: 0px 40px 20px rgba(0, 0, 0, 0.25);
+} */
+
+.serviceContainer .serviceBtnContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.serviceContainer .serviceBtnContainer a .servicesBtn {
+  width: 350px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  background-color: white;
+  font-size: 1.75rem;
+}
+
+.serviceContainer .serviceBtnContainer a .servicesBtn {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.serviceContainer .serviceBtnContainer .servicesBtn:hover {
+  cursor: pointer;
+  box-shadow: 40px 0 100px #E95D08, -40px 0 100px black;
+  background-image: linear-gradient(to right, #9f2b00, #b74003, #d05606, #e76c0b, #ff8210);
+  color: var(--textWhite);
+}
+
+/* styling working with us section */
+.workWithUsContainer {
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.workWithUsContainer .workWithTitle {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.50rem;
+  color: var(--color-3);
+  
+}
+
+.workWithUsContainer .workwithP {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.workWithUsContainer .workwithP .trustContent {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.workWithUsContainer .workwithP .trustContent .trustP {
+  width: 1100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.workWithUsContainer .workwithP .trustContent .trustP h3 {
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  font-size: 1.80rem;
+  padding-top: 10px;
+  color: var(--color-3);
+  padding-left: 10px;
+}
+
+.workWithUsContainer .workwithP .trustContent .trustP p {
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  font-size: 1.50rem;
+  padding-left: 10px;
+}
+
+.workWithUsContainer .workwithP .trustContent .trustImg {
+  width: 250px;
+  height: 250px;
+}
+
+.workWithUsContainer .workwithP .loyaltyContent {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+  background-color: var(--color-3);
+}
+
+.workWithUsContainer .workwithP .loyaltyContent .loyaltyP {
+  width: 1100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--textWhite);
+  gap: 30px;
+}
+
+.workWithUsContainer .workwithP .loyaltyContent .loyaltyP h3 {
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  font-size: 1.80rem;
+  padding-top: 30px;
+  padding-right: 10px;
+}
+
+.workWithUsContainer .workwithP .loyaltyContent .loyaltyP p {
+  width: 100%;
+  height: 200px;
+  text-align: right;
+  font-size: 1.50rem;
+  padding-right: 10px;
+}
+
+.workWithUsContainer .workwithP .loyaltyContent .loyaltyImg {
+  width: 250px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.workWithUsContainer .workwithP .confidentContent {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.workWithUsContainer .workwithP .confidentContent .confidentP {
+  width: 1100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.workWithUsContainer .workwithP .confidentContent .confidentP h3 {
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  font-size: 1.80rem;
+  padding-top: 10px;
+  color: var(--color-3);
+  padding-left: 10px;
+}
+
+.workWithUsContainer .workwithP .confidentContent .confidentP p {
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  font-size: 1.50rem;
+  padding-left: 10px;
+}
+
+.workWithUsContainer .workwithP .confidentContent .confidentImg {
+  width: 250px;
+  height: 250px;
+}
+
+
+/* styling ready to book section */
+.readyToBookContainer {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 0px;
+  background-color: var(--color-3);
+}
+
+.readyToBookContainer .readyToBookTitle {
+  width: 100%;
+  height: 40px;
+  font-size: 1.50rem;
+  text-align: center;
+  color: var(--textWhite);
+}
+
+.readyToBookContainer .readyToBookP {
+  width: 100%;
+  height: 40px;
+  font-size: 1.75rem;
+  text-align: center;
+  color: var(--textWhite);
+}
+
+.readyToBookContainer .bookBtnContainer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.readyToBookContainer .bookBtnContainer a .bookBtn {
+  width: 350px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  background-color: white;
+  font-size: 1.75rem;
+}
+
+.readyToBookContainer .bookBtnContainer a .bookBtn  {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.readyToBookContainer .bookBtnContainer .bookBtn:hover {
+  cursor: pointer;
+  box-shadow: 40px 0 100px #E95D08, -40px 0 100px black;
+  background-image: linear-gradient(to right, #9f2b00, #b74003, #d05606, #e76c0b, #ff8210);
+  color: var(--textWhite);
+}
+
+/* Company styling */
+.companiesContainer {
+  width: 100%;
+  height: 330px;
+}
+
+.companiesContainer h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-3);
+  padding: 15px 0 45px 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 200px;  
+  max-width: 100%;
+  transition: filter 0.3s ease;
+  overflow: hidden;
+}
+
+
+.companiesContainer .swiper .companiesList .companyItem .imgContainer {
+  width: 200px;
+  height: 100px;
+}
+
+.companiesContainer .swiper .companiesList .companyItem .imgContainer img{
+  width: 100%;
+}
+
+.swiper .swiper-slide-button{
+  color: var(--color-3);
+}
+
+
+
+/* styling footer section */
+footer {
+  width: 100%;
+  height: 270px;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer .footerLogo .imgContainer {
+  width: 100px;
+  height: 100px;
+}
+
+.footerContainer .footerLogo .imgContainer img {
+  width: 100%;
+}
+
+.footerContainer .footerLogo h4 {
+  font-size: 1.25rem;
+}
+
+.footerContainer .footerLogo h4 a {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.footerContainer .footerLogo h4 a:hover {
+  text-decoration: underline;
+} 
+
+.footerContainer .footerNav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+
+.footerContainer .footerNav a {
+  color: black;
+  text-decoration: none;
+}
+
+.footerContainer .footerNav a:hover {
+  text-decoration: underline;
+}
+
+.footerContainer .footerCopyRights {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerContainer .footerCopyRights a {
+  color: var(--textBlack);
+  text-decoration: none;
+}
+
+.footerContainer .footerCopyRights a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width: 1800px) {
+  .serviceContainer {
+    height: 800px;
+  }
+
+
+  .serviceContainer .bestServices{
+    height: 400px;
+  }
+
+  .serviceContainer .bestServices .topServices1 {
+    width: 300px;
+    height: 300px;
+    
+  }
+}
+
+@media(max-width: 1400px) {
+  .workWithUsContainer .workwithP .trustContent .trustP p {
+    padding-right: 40px;
+    
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyP p {
+    padding-left: 40px;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent .confidentP p {
+    padding-right: 40px;
+    
+    
+  }
+}
+
+
+@media(max-width: 1280px) {
+  .serviceContainer .bestServices{
+    height: 350px;
+  }
+
+  .serviceContainer .bestServices .topServices1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .serviceContainer .bestServices .topServices1 P {
+    font-size: 1.55rem;
+  }
+
+}
+
+@media(max-width: 1125px) {
+  .workWithUsContainer .workwithP .trustContent {
+    height: 300px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .mainHeadContent .headContentImg h1 {
+    font-size: 3.25rem;
+  }
+
+  .headContentP .paragraph {
+    font-size: 1.45rem;
+    width: 100%;
+  }
+
+  .serviceContainer {
+    height: 700px;
+  }
+
+  .serviceContainer .servicesWording .servicesP {
+    font-size: 1.45rem;
+    width: 100%;
+    height: 100px;
+  }
+
+  .serviceContainer .bestServices{
+    height: 300px;
+  }
+
+  .serviceContainer .bestServices .topServices1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .serviceContainer .bestServices .topServices1 P {
+    font-size: 1.25rem;
+  }
+
+  .workWithUsContainer .workWithUsP {
+    font-size: 1.45rem;
+  }
+
+  .readyToBookContainer .readyToBookP {
+    font-size: 1.45rem;
+  }
+
+  .workWithUsContainer .workwithP .trustContent {
+    width: 100%;
+    display: block;
+  }
+  
+  .workWithUsContainer .workwithP .trustContent .trustP {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .workWithUsContainer .workwithP .trustContent .trustP h3 {
+    width: 100%;
+    text-align: center; 
+    padding-top: 10px;
+    color: var(--color-3);
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  
+  .workWithUsContainer .workwithP .trustContent .trustP p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.45rem;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  
+  .workWithUsContainer .workwithP .trustContent .trustImg {
+    display: none;
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent {
+    width: 100%;
+    height: 300px;
+    display: block;
+    background-color: var(--color-3);
+  }
+  
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyP {
+    width: 100%;
+    height: 100%;
+    color: var(--textWhite);
+  }
+  
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyP h3 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyP p {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-size: 1.45rem;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyImg {
+    display: none;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent {
+    width: 100%;
+    height: 300px;
+    display: block;
+  }
+  
+  .workWithUsContainer .workwithP .confidentContent .confidentP {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .workWithUsContainer .workwithP .confidentContent .confidentP h3 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    color: var(--color-3);
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .workWithUsContainer .workwithP .confidentContent .confidentP p {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-size: 1.45rem;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .workWithUsContainer .workwithP .confidentContent .confidentImg {
+    display: none;
+  }
+
+
+
+}
+
+
+
+@media(max-width: 850px) {
+ nav .linksContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    background-color: var(--color-3);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-in-out;
+    overflow: hidden;
+    
+  }
+
+  .navLogo  {
+    left: 0%;
+  }
+
+  nav .linksContainer a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    color: var(--textWhite);
+  }
+
+  .dropdownWrapper {
+    height: 5%;
+    width: 30%;
+  }
+
+  .ceoUL {
+    background-color: white;
+    color: black;
+    width: 130px;
+    height: 50px;
+    position: relative;
+    left: -110%;
+    
+  }
+
+  .ceoUL li a {
+    color: black;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .openBtn, .closeBtn {
+    display: block;
+    padding: 20px;
+  }
+
+  #sidebar-active:checked ~ .linksContainer {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    background-color:  rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .headTitle {
+    font-size: 1.30rem;
+  }
+
+  .mainHeadContent  {
+    height: 200px;
+  }
+  
+  .mainHeadContent .headContentImg {
+    background-image: url('../images/HomePage\ Banner-01\ small.jpg');
+  }
+
+  .serviceContainer {
+    height: 1060px;
+  }
+
+
+  .serviceContainer .bestServices{
+    height: 750px;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+  }
+
+  .serviceContainer .bestServices .topServices1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .serviceContainer .bestServices .topServices1 P {
+    font-size: 1.55rem;
+  }
+
+
+  .companiesContainer .company-wrapper .companiesList .companyItem .imgContainer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .company-wrapper .swiper-slide-button{
+    display: none;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent .confidentP p {
+    height: 300px;
+    text-align: center;
+  }
+
+  
+  
+
+}
+
+@media(max-width: 768px) {
+  .mainHeadContent .headContentImg h1 {
+    font-size: 2.75rem;
+  }
+
+  .serviceContainer .bestServices{
+    height: 500px;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+  }
+
+  .serviceContainer .bestServices .topServices1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .serviceContainer .bestServices .topServices1 P {
+    font-size: 1.20rem;
+  }
+
+  .workWithUsContainer {
+    height: 1500px;
+  }
+
+  .workWithUsContainer .workwithP {
+    height: 1300px;
+  }
+
+  .workWithUsContainer .workwithP .trustContent {
+    height: 300px;
+  }
+
+  .workWithUsContainer .workwithP .trustContent .trustP p {
+    height: 250px;
+  }
+
+}
+
+@media(max-width: 600px) {
+  .navLogo .logoHeader {
+    font-size: .85rem;
+  }
+
+  .workWithUsContainer .workwithP .trustContent {
+    height: 350px;
+  }
+
+  .workWithUsContainer .workwithP .trustContent .trustP p {
+    height: 300px;
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent {
+    height: 350px;
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyP p {
+    height: 260px;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent {
+    height: 350px;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent .confidentP p {
+    height: 300px;
+  }
+
+
+}
+
+@media(max-width: 500px) {
+  .workWithUsContainer {
+    height: 1800px;
+  }
+
+  .workWithUsContainer .workwithP {
+    height: 1600px;
+  }
+
+  .workWithUsContainer .workwithP .trustContent {
+    height: 400px;
+  }
+
+  .workWithUsContainer .workwithP .trustContent .trustP p {
+    height: 350px;
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent {
+    height: 350px;
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyP p {
+    height: 300px;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent {
+    height: 450px;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent .confidentP p {
+    height: 400px;
+  }
+
+}
+
+
+
+@media(max-width: 435px) {
+  .mainHeadContent .headContentImg h1 {
+    font-size: 2rem;
+  }
+
+  .serviceContainer .bestServices{
+    height: 400px;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+  }
+
+  .serviceContainer .bestServices .topServices1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .serviceContainer .bestServices .topServices1 P {
+    font-size: .95rem;
+  }
+
+  .workWithUsContainer .workwithP .trustContent {
+    height: 480px;
+   
+  }
+
+  .workWithUsContainer .workwithP .trustContent .trustP p {
+    height: 430px;
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent {
+    height: 450px;
+    align-items: center;
+  }
+
+  .workWithUsContainer .workwithP .loyaltyContent .loyaltyP p {
+    height: 400px;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent {
+    height: 500px;
+    align-items: center;
+  }
+
+  .workWithUsContainer .workwithP .confidentContent .confidentP p {
+    height: 450px;
+  }
+
+  .readyToBookContainer {
+    height: 300px;
+  }
+
+  .readyToBookContainer .readyToBookTitle {
+    font-size: 1.25rem;
+  }
+
+  
+}
